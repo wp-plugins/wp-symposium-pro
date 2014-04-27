@@ -1,4 +1,4 @@
-=== Plugin Name ===
+=== WP Symposium Pro Social Network plugin ===
 Author: WP Symposium Pro
 Contributors: Simon Goodchild
 Donate link: http://www.wpsymposiumpro.com
