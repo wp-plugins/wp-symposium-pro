@@ -9,7 +9,7 @@ Tested up to: 3.9
 License: GPLv2 or later
 Stable tag: 0.56.2
 
-Professional Social Networking for WordPress
+The ultimate social network plugin for WordPress
 
 == Description ==
 
