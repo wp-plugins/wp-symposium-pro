@@ -15,9 +15,7 @@ Create your own social network in WordPress!
 
 **This is the ultimate social network plugin for WordPress.** You can create your own social network, on your WordPress website.
 
-With profiles, activity (wall), unlimited forums, friends, and so much more, it's perfect for clubs, schools, interest groups, engaging with customers, support sites, gaming sites, dating sites, limited only by your imagination!
-
-The core plugin includes member profiles, activity (wall), unlimited forums, friends and email alerts.
+With profiles, activity (wall), unlimited forums, friends, email alerts and so much more, it's perfect for clubs, schools, interest groups, engaging with customers, support sites, gaming sites, dating sites, limited only by your imagination!
 
 Just add the plugin, click a button and you have your own social network, simple as that. :)
 
