@@ -459,7 +459,7 @@ function wps_forum_post($atts) {
 
 	$html = '';
 
-	if ( !isset($_GET['forum_action']) && !get_query_var('topic') ): // not showing a single post
+	if ( is_user_logged_in() && !isset($_GET['forum_action']) && !get_query_var('topic') ): // not showing a single post
 
 		global $current_user;
 
