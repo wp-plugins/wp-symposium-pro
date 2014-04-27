@@ -7,7 +7,7 @@ Tags: wp symposium pro, social network, social networking, social media, wpsympo
 Requires at least: 3.0
 Tested up to: 3.9
 License: GPLv2 or later
-Stable tag: 0.56
+Stable tag: 0.56.1
 
 Professional Social Networking for WordPress
 
@@ -43,6 +43,7 @@ The best way to see it in action, and try it out for free, is visit http://www.w
 
 == Changelog ==
 
+0.56.1 Minor code change for repository
 0.56   First release to WordPress repository
 
 0.55.2 Parameter to include user_id for [wps-usermeta]
