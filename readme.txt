@@ -9,15 +9,15 @@ Tested up to: 3.9
 License: GPLv2 or later
 Stable tag: 0.56.2
 
-The ultimate social network plugin for WordPress
+Create your own social network!
 
 == Description ==
 
-**Create your own social network!**
+**This is the ultimate social network plugin for WordPress.**
 
 The core plugin includes member profiles, activity (wall), unlimited forums, friends and email alerts.
 
-Add the plugin, click a button and you have your own social network, simple as that :)
+Just add the plugin, click a button and you have your own social network, simple as that :)
 
 Incredibly compatible with themes and plugins. Find out more, including additional plugins for WP Symposium Pro, at http://www.wpsymposiumpro.com.
 
