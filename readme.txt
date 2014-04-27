@@ -17,7 +17,7 @@ Create your own social network!
 
 The core plugin includes member profiles, activity (wall), unlimited forums, friends and email alerts.
 
-Just add the plugin, click a button and you have your own social network, simple as that :)
+Just add the plugin, click a button and you have your own social network, simple as that. :)
 
 Incredibly compatible with themes and plugins. Find out more, including additional plugins for WP Symposium Pro, at http://www.wpsymposiumpro.com.
 
@@ -26,8 +26,6 @@ Want to change something, the layout, text, button labels? WP Symposium Pro’s 
 Extra plugins are available that add features galore! Please note that these are separate plugins.
 
 Find out all about it at http://www.wpsymposiumpro.com.
-
-A big thank you to Jack, Harry, Patricia, Robert and Michael!
 
 Oh, and drink tea, tea is good...
 
