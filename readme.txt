@@ -13,7 +13,9 @@ Create your own social network in WordPress!
 
 == Description ==
 
-**This is the ultimate social network plugin for WordPress.**
+**This is the ultimate social network plugin for WordPress.** You can create your own social network, on your WordPress website.
+
+With profiles, activity (wall), unlimited forums, friends, and so much more, it's perfect for clubs, schools, interest groups, engaging with customers, support sites, gaming sites, dating sites, limited only by your imagination!
 
 The core plugin includes member profiles, activity (wall), unlimited forums, friends and email alerts.
 
@@ -23,7 +25,7 @@ Incredibly compatible with themes and plugins. Find out more, including addition
 
 Want to change something, the layout, text, button labels? WP Symposium Pro’s real power lies behind shortcodes with options galore, that allow you to change just about everything, and design your social network pages the you want them!
 
-Extra plugins are available that add features galore! Please note that these are separate plugins.
+Extra plugins are available that add features galore! Private mail, groups, choose who to share activity with, image and YouTube attachments, and many more! Please note that these are separate plugins.
 
 Find out all about it at http://www.wpsymposiumpro.com.
 
