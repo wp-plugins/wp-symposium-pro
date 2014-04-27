@@ -9,7 +9,7 @@ Tested up to: 3.9
 License: GPLv2 or later
 Stable tag: 0.56.2
 
-Create your own social network!
+Create your own social network in WordPress!
 
 == Description ==
 
