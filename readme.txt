@@ -31,6 +31,14 @@ Find out all about it at http://www.wpsymposiumpro.com.
 
 Go to plugins in your admin dashboard and click Add New, and search for WP Symposium Pro.
 
+Once activated, to get started quickly, go to WPS Pro->Setup (a new menu item), and click on the "Add Profile Pages" button (once).
+
+This will install a default profile page (with activity, etc), an edit profile page, a change avatar page and a friendships.
+
+Then click on the "Add Forum" button for as many forums as you want!
+
+You may then want to add your new WordPress pages to your site menu via Appearance->Menus.
+
 To manually install, download the ZIP file, extract contents and place in wp_content/wp-symposium-pro folder.
 
 == Frequently Asked Questions ==
