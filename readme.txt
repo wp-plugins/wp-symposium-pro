@@ -27,11 +27,17 @@ Extra plugins are available that add features galore! Please note that these are
 
 Find out all about it at http://www.wpsymposiumpro.com.
 
+A big thank you to Jack, Harry, Patricia, Robert and Michael!
+
+Oh, and drink tea, tea is good...
+
 == Installation ==
 
 Go to plugins in your admin dashboard and click Add New, and search for WP Symposium Pro.
 
 Once activated, to get started quickly, go to WPS Pro->Setup (a new menu item), and click on the "Add Profile Pages" button (once).
+
+Erm... that's it!
 
 This will install a default profile page (with activity, etc), an edit profile page, a change avatar page and a friendships.
 
