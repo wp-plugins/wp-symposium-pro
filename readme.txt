@@ -21,7 +21,7 @@ Just add the plugin, click a button and you have your own social network, simple
 
 Incredibly compatible with themes and plugins. Find out more, including additional plugins for WP Symposium Pro, at http://www.wpsymposiumpro.com.
 
-Want to change something, the layout, text, button labels? WP Symposium Pro’s real power lies behind shortcodes with options galore, that allow you to change just about everything, and design your social network pages the you want them!
+Want to change something, the layout, text, button labels? WP Symposium Pro’s real power lies behind shortcodes with options galore, that allow you to change just about everything, and design your social network pages the way you want them!
 
 Extra plugins are available that add features galore! Private mail, groups, choose who to share activity with, image and YouTube attachments, and many more! Please note that these are separate plugins.
 
