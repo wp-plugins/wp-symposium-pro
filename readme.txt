@@ -13,7 +13,7 @@ The ultimate social network plugin for WordPress
 
 == Description ==
 
-**Create your own social network, to work and look the way you want it.**
+**Create your own social network!**
 
 The core plugin includes member profiles, activity (wall), unlimited forums, friends and email alerts.
 
