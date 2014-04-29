@@ -7,7 +7,7 @@ Tags: wp symposium pro, social network, social networking, social media, wpsympo
 Requires at least: 3.0
 Tested up to: 3.9
 License: GPLv2 or later
-Stable tag: 0.56.3
+Stable tag: 0.56.4
 
 Create your own social network in WordPress!
 
@@ -55,6 +55,7 @@ The best way to see it in action, and try it out for free, is visit http://www.w
 
 == Changelog ==
 
+0.56.4 Update to wps_display_name() to support WPML plugin
 0.56.3 Fixed bug when editing a forum post/comment when is the author
 0.56.2 Minor fix to link from forum post on sub-folder installation
 0.56.1 Minor code change for repository
