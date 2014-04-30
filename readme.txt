@@ -23,7 +23,7 @@ Incredibly compatible with themes and plugins. Find out more, including addition
 
 Want to change something, the layout, text, button labels? WP Symposium Pro’s real power lies behind shortcodes with options galore, that allow you to change just about everything, and design your social network pages the way you want them!
 
-Multi-lingual site? No problem! Easily change all the text your users will see through options. Using WPML, works happily with that plugin too!
+Multi-lingual site? No problem! Easily change all the text your users will see through options. Using WPML? works happily with that plugin too!
 
 Extra plugins are available that add features galore! Private mail, groups, choose who to share activity with, image and YouTube attachments, and many more! Please note that these are separate plugins.
 
