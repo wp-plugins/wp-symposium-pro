@@ -7,7 +7,7 @@ Tags: wp symposium pro, social network, social networking, social media, wpsympo
 Requires at least: 3.0
 Tested up to: 3.9
 License: GPLv2 or later
-Stable tag: 0.56.4
+Stable tag: 0.57
 
 Create your own social network in WordPress!
 
@@ -54,6 +54,9 @@ Please visit http://www.wpsymposiumpro.com/frequently-asked-questions
 The best way to see it in action, and try it out for free, is visit http://www.wpsymposiumpro.com !
 
 == Changelog ==
+
+0.57   Can now delete forum posts/replies if you are the owner or admin
+       Various options added to [wps-forum] and [wps-usermeta] to support translations and delete feature
 
 0.56.4 Update to wps_display_name() to support WPML plugin
 0.56.3 Fixed bug when editing a forum post/comment when is the author
