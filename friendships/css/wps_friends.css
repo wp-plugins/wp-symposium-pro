@@ -1,0 +1,32 @@
+#wps_friends {
+	overflow:auto;
+}
+.wps_friends_friend {
+	clear: both;
+	margin-bottom: 10px;
+	overflow: auto;
+}
+.wps_friends_friend_avatar {
+	float: left;
+	margin-right: 6px;
+}
+
+#wps_pending_friends {
+	overflow:auto;
+}
+.wps_pending_friends_friend {
+	clear: both;
+	margin-bottom: 10px;
+	overflow: auto;
+}
+.wps_pending_friends_friend input[type=submit] {
+	float: left;
+	margin-right: 5px;
+}
+.wps_pending_friends_friend_avatar {
+	float: left;
+	margin-right: 6px;
+}
+.wps_pending_friends_accept_reject {
+	overflow:auto;
+}
