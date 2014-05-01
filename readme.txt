@@ -7,7 +7,7 @@ Tags: wp symposium pro, social network, social networking, social media, wpsympo
 Requires at least: 3.0
 Tested up to: 3.9
 License: GPLv2 or later
-Stable tag: 0.57
+Stable tag: 0.58
 
 Create your own social network in WordPress!
 
@@ -56,6 +56,14 @@ Please visit http://www.wpsymposiumpro.com/frequently-asked-questions
 The best way to see it in action, and try it out for free, is visit http://www.wpsymposiumpro.com !
 
 == Changelog ==
+
+0.58   Can change sticky status when editing a post (admin only)
+       Forum can now be locked (via forum setup) to stop new posts/replies
+       Added options to [wps-forums]:
+       -> show_summary, show_posts and show_posts_header
+       Added translation options for [wps-forums], [wps-forum] and [wps-forum-page]:
+       -> forum_title, forum_count, forum_last_activity and forum_freshness
+       -> header_title, header_count, header_last_activity
 
 0.57   Can now delete forum posts/replies if you are the owner or admin
        Various options added to [wps-forum] and [wps-usermeta] to support translations and delete feature
