@@ -7,7 +7,7 @@ Tags: wp symposium pro, social network, social networking, social media, wpsympo
 Requires at least: 3.0
 Tested up to: 3.9
 License: GPLv2 or later
-Stable tag: 0.58
+Stable tag: 0.58.1
 
 Create your own social network in WordPress!
 
@@ -57,6 +57,7 @@ The best way to see it in action, and try it out for free, is visit http://www.w
 
 == Changelog ==
 
+0.58.1 Minor changes
 0.58   Can change sticky status when editing a post (admin only)
        Forum can now be locked (via forum setup) to stop new posts/replies
        Added options to [wps-forums]:
