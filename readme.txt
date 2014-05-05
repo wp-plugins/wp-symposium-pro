@@ -57,7 +57,7 @@ The best way to see it in action, and try it out for free, is visit http://www.w
 
 == Changelog ==
 
-0.58.5 Added 0.58.4 last_active_format option to [wps-friends]
+0.58.5 Added last_active_format option to [wps-friends]
 0.58.4 Fix for [wps-forums] shortcode
 0.58.3 New shortcode [wps-friends-status] to show status of friendship
 
