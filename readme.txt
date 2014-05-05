@@ -7,7 +7,7 @@ Tags: wp symposium pro, social network, social networking, social media, wpsympo
 Requires at least: 3.0
 Tested up to: 3.9
 License: GPLv2 or later
-Stable tag: 0.58.2
+Stable tag: 0.58.3
 
 Create your own social network in WordPress!
 
@@ -56,6 +56,8 @@ Please visit http://www.wpsymposiumpro.com/frequently-asked-questions
 The best way to see it in action, and try it out for free, is visit http://www.wpsymposiumpro.com !
 
 == Changelog ==
+
+0.58.3 New shortcode [wps-friends-status] to show status of friendship
 
 0.58.2 Fixed potential security risk when viewing individual posts
        Added secure_post_msg to [wps-forum]
