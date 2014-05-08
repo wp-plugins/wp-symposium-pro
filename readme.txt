@@ -5,9 +5,9 @@ Donate link: http://www.wpsymposiumpro.com
 Link: http://www.wpsymposiumpro.com
 Tags: wp symposium pro, social network, social networking, social media, wpsymposium pro, wp-symposium, wp symposium, symposium
 Requires at least: 3.0
-Tested up to: 3.9
+Tested up to: 3.9.1
 License: GPLv2 or later
-Stable tag: 0.58.5
+Stable tag: 0.59
 
 Create your own social network in WordPress!
 
@@ -27,7 +27,9 @@ Multi-lingual site? No problem! Easily change all the text your users will see t
 
 Extra plugins are available that add features galore! Private mail, groups, choose who to share activity with, image and YouTube attachments, and many more! Please note that these are separate plugins.
 
-Find out all about it at http://www.wpsymposiumpro.com.
+And be sure to check out the Show Posts plugin for WP Symposium Pro - show any of your site content, with tons of options, you'll be amazed at how flexible it is!
+
+Find out all about it, and more, at http://www.wpsymposiumpro.com.
 
 Oh, and drink tea, tea is good...
 
@@ -49,13 +51,19 @@ To manually install, download the ZIP file, extract contents and place in wp_con
 
 == Frequently Asked Questions ==
 
-Please visit http://www.wpsymposiumpro.com/frequently-asked-questions
+The best source of news and information is the WP Symposium Pro blog at http://www.wpsymposiumpro.com/blog, it's constantly kept up-to-date with news, updates, articles and tips.
+
+For more FAQs, please visit http://www.wpsymposiumpro.com/frequently-asked-questions
 
 == Screenshots ==
 
 The best way to see it in action, and try it out for free, is visit http://www.wpsymposiumpro.com !
 
 == Changelog ==
+
+0.59   Change Posts to Topics as default forum "post" header title
+       View Forum Post (either link or button) now goes to post on front end
+       View Activity (either link or button) now goes to post on front end
 
 0.58.5 Added last_active_format option to [wps-friends]
 0.58.4 Fix for [wps-forums] shortcode
@@ -219,4 +227,4 @@ The best way to see it in action, and try it out for free, is visit http://www.w
 
 == Upgrade Notice ==
 
-Latest news and information on http://www.wpsymposiumpro.com
+Latest news and information at http://www.wpsymposiumpro.com/blog.
