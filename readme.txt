@@ -7,7 +7,7 @@ Tags: wp symposium pro, social network, social networking, social media, wpsympo
 Requires at least: 3.0
 Tested up to: 3.9.1
 License: GPLv2 or later
-Stable tag: 0.59
+Stable tag: 14.05.09
 
 Create your own social network in WordPress!
 
@@ -19,15 +19,25 @@ With profiles, activity (wall), unlimited forums, friends, email alerts and so m
 
 Just add the plugin, click a button and you have your own social network, simple as that. :)
 
+**Incredibly compatible**
+
 Incredibly compatible with themes and plugins. Find out more, including additional plugins for WP Symposium Pro, at http://www.wpsymposiumpro.com.
+
+**Massively customizable**
 
 Want to change something, the layout, text, button labels? WP Symposium Pro’s real power lies behind shortcodes with options galore, that allow you to change just about everything, and design your social network pages the way you want them!
 
-Multi-lingual site? No problem! Easily change all the text your users will see through options. Using WPML? Works happily with that plugin too!
+**Multi-lingual site?**
+
+No problem! Easily change all the text your users will see through options. Using WPML? Works happily with that plugin too!
+
+**And there's even more...!**
 
 Extra plugins are available that add features galore! Private mail, groups, choose who to share activity with, image and YouTube attachments, and many more! Please note that these are separate plugins.
 
 And be sure to check out the Show Posts plugin for WP Symposium Pro - show any of your site content, with tons of options, you'll be amazed at how flexible it is!
+
+**Find out more**
 
 Find out all about it, and more, at http://www.wpsymposiumpro.com.
 
@@ -60,6 +70,13 @@ For more FAQs, please visit http://www.wpsymposiumpro.com/frequently-asked-quest
 The best way to see it in action, and try it out for free, is visit http://www.wpsymposiumpro.com !
 
 == Changelog ==
+
+14.05.09 When editing a forum post (not reply) can move post to another forum
+         Set [wps_forum moved_to="%s successfully moved to %s"] to change success message
+         Set [wps_forum_post can_move_forum="0"] to disable
+         Fixed space in profile link for email alerts
+         Added [wps-activity hide_until_loaded, a flag to delay activity showing until after CSS loaded, default false] (can improve user experience)
+         Added [wps_friends_status user_id='x'] where x is a user ID, or defaults to currently viewed user
 
 0.59   Change Posts to Topics as default forum "post" header title
        View Forum Post (either link or button) now goes to post on front end
