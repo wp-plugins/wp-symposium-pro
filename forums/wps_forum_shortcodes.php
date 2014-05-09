@@ -9,6 +9,9 @@ function wps_forum_init() {
 	wp_enqueue_script('wps-forum-js', plugins_url('wps_forum.js', __FILE__), array('jquery'));	
 	wp_localize_script( 'wps-forum-js', 'wps_ajax', array( 'ajaxurl' => admin_url( 'admin-ajax.php' ) ) );		
 	wp_enqueue_style('wps-forum-css', plugins_url('wps_forum.css', __FILE__), 'css');
+	// Select2 replacement drop-down list from core (ready for dependenent plugins like who-to that only uses hooks/filters)
+	wp_enqueue_script('wps-select2-js', plugins_url('../js/select2.min.js', __FILE__), array('jquery'));	
+	wp_enqueue_style('wps-select2-css', plugins_url('../js/select2.css', __FILE__), 'css');
 	// Anything else?
 	do_action('wps_forum_init_hook');
 }
