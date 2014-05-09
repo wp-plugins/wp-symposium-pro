@@ -7,7 +7,7 @@ Tags: wp symposium pro, social network, social networking, social media, wpsympo
 Requires at least: 3.0
 Tested up to: 3.9.1
 License: GPLv2 or later
-Stable tag: 14.05.09
+Stable tag: 14.05.10
 
 Create your own social network in WordPress!
 
@@ -71,6 +71,7 @@ The best way to see it in action, and try it out for free, is visit http://www.w
 
 == Changelog ==
 
+14.05.10 Small change to filter name typo
 14.05.09 When editing a forum post (not reply) can move post to another forum
          Set [wps_forum moved_to="%s successfully moved to %s"] to change success message
          Set [wps_forum_post can_move_forum="0"] to disable
