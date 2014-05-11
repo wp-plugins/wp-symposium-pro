@@ -71,6 +71,10 @@ The best way to see it in action, and try it out for free, is visit http://www.w
 
 == Changelog ==
 
+14.05.11 Allow users to "stick" activity on their home page (not news feed)
+         Use sticky_label and unsticky_label, set to '' to not offer option
+         Added delete_label as option to [wps-activity] to change Settings delete text (set to '' to hide)
+
 14.05.10 Small change to filter name typo
 14.05.09 When editing a forum post (not reply) can move post to another forum
          Set [wps_forum moved_to="%s successfully moved to %s"] to change success message
