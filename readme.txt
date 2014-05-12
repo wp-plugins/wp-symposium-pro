@@ -7,7 +7,7 @@ Tags: wp symposium pro, social network, social networking, social media, wpsympo
 Requires at least: 3.0
 Tested up to: 3.9.1
 License: GPLv2 or later
-Stable tag: 14.05.11
+Stable tag: 14.05.12
 
 Create your own social network in WordPress!
 
@@ -70,6 +70,11 @@ For more FAQs, please visit http://www.wpsymposiumpro.com/frequently-asked-quest
 The best way to see it in action, and try it out for free, is visit http://www.wpsymposiumpro.com !
 
 == Changelog ==
+
+14.05.12 Fix when "sticked" activity is older than the most recent "count" number of posts
+         Added date_format across all plugins, where applicable
+         Added status to [wps-forum], set to '' (all), 'open' or 'closed'
+         Improve default CSS for [wps-friends]
 
 14.05.11 Allow users to "stick" activity on their home page (not news feed)
          Use sticky_label and unsticky_label, set to '' to not offer option
