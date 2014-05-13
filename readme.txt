@@ -7,7 +7,7 @@ Tags: wp symposium pro, social network, social networking, social media, wpsympo
 Requires at least: 3.0
 Tested up to: 3.9.1
 License: GPLv2 or later
-Stable tag: 14.05.12
+Stable tag: 14.05.13
 
 Create your own social network in WordPress!
 
@@ -70,6 +70,10 @@ For more FAQs, please visit http://www.wpsymposiumpro.com/frequently-asked-quest
 The best way to see it in action, and try it out for free, is visit http://www.wpsymposiumpro.com !
 
 == Changelog ==
+
+14.05.13 Automatic fall back to older browsers added for activity attachments, and avatar upload, eg. MS IE <= 9
+         Added choose, try_again_msg, and file_types_msg as options for [wps-avatar-change]
+         Added missing date_format to [wps-forum]
 
 14.05.12 Fix when "sticked" activity is older than the most recent "count" number of posts
          Added date_format across all plugins, where applicable
