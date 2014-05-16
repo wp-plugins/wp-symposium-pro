@@ -7,7 +7,7 @@ Tags: wp symposium pro, social network, social networking, social media, wpsympo
 Requires at least: 3.0
 Tested up to: 3.9.1
 License: GPLv2 or later
-Stable tag: 14.05.13
+Stable tag: 14.05.16
 
 Create your own social network in WordPress!
 
@@ -71,6 +71,15 @@ The best way to see it in action, and try it out for free, is visit http://www.w
 
 == Changelog ==
 
+14.05.16 Added layout option to [wps-friends], can be list or fluid, default list
+         Added closed_switch and closed_switch_msg to toggle inclusion of closed forum posts
+         Improved [wps-forum-show-posts] to ensure forum replies are found
+         Forum post owners can now move posts to other forums (as well as site admins)
+         Fixed CSS for forum textarea on some browsers, overlaying with Forum Toolbar
+         Fixed to date format time difference on activity
+         Removed friendships/js and friendships/css subfolders to reduce file/dir count
+         Removed avatar/css subfolders to reduce file/dir count
+
 14.05.13 Automatic fall back to older browsers added for activity attachments, and avatar upload, eg. MS IE <= 9
          Added choose, try_again_msg, and file_types_msg as options for [wps-avatar-change]
          Added missing date_format to [wps-forum]
@@ -85,7 +94,8 @@ The best way to see it in action, and try it out for free, is visit http://www.w
          Added delete_label as option to [wps-activity] to change Settings delete text (set to '' to hide)
 
 14.05.10 Small change to filter name typo
-14.05.09 When editing a forum post (not reply) can move post to another forum
+14.05.09 New version numbering introduced
+         When editing a forum post (not reply) can move post to another forum
          Set [wps_forum moved_to="%s successfully moved to %s"] to change success message
          Set [wps_forum_post can_move_forum="0"] to disable
          Fixed space in profile link for email alerts
@@ -203,7 +213,7 @@ The best way to see it in action, and try it out for free, is visit http://www.w
 0.28.1 Bug fix
 0.28   Added WordPress TinyMCE editor toolbar button that can be extended by other plugins
        Requires WordPress v3.9+
-	   Added [wps-display-name] and [wps-avatar] to WPS editor toolbar button
+	     Added [wps-display-name] and [wps-avatar] to WPS editor toolbar button
 
 0.27   Custom CSS fixed to support quotes
 
@@ -246,7 +256,7 @@ The best way to see it in action, and try it out for free, is visit http://www.w
 
 0.9    Added front end edit profile [wps-usermeta-change]
 
-0.8    Added change avatar to front end and link [wps_avatar_change_link] and [wps_avatar_change]
+0.8    Added change avatar to front end and link [wps-avatar-change-link] and [wps-avatar-change]
 
 0.7    Added admin choice for icons color scheme
 
