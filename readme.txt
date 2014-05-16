@@ -9,7 +9,7 @@ Tested up to: 3.9.1
 License: GPLv2 or later
 Stable tag: 14.05.19
 
-Create your own social network in WordPress!
+Create your own social network in WordPress! Activity wall, friends, forums, private mail - and more!
 
 == Description ==
 
