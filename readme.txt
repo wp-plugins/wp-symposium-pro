@@ -7,7 +7,7 @@ Tags: wp symposium pro, social network, social networking, social media, wpsympo
 Requires at least: 3.0
 Tested up to: 3.9.1
 License: GPLv2 or later
-Stable tag: 14.05.16
+Stable tag: 14.05.17
 
 Create your own social network in WordPress!
 
@@ -70,6 +70,8 @@ For more FAQs, please visit http://www.wpsymposiumpro.com/frequently-asked-quest
 The best way to see it in action, and try it out for free, is visit http://www.wpsymposiumpro.com !
 
 == Changelog ==
+
+14.05.17 Fixed problem with Friendships JS
 
 14.05.16 Added layout option to [wps-friends], can be list or fluid, default list
          Added closed_switch and closed_switch_msg to toggle inclusion of closed forum posts
