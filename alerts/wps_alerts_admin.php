@@ -1,5 +1,4 @@
-<?
-
+<?php
 																	/* ************* */
 																	/* HOOKS/FILTERS */
 																	/* ************* */
@@ -403,5 +402,4 @@ function wps_admin_getting_started_core_save_hook_alerts($the_post) {
 	endif;
 
 }
-
 ?>

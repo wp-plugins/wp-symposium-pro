@@ -67,8 +67,8 @@ function wps_taxonomy_metadata_add( $tag ) {
 		 ?>						
 		</select>
 		<div class="description"><?php echo sprintf(__('WordPress page that has this forum\'s shortcodes on.<br />See <a href="%s">Getting Started</a> information.', WPS2_TEXT_DOMAIN), 'admin.php?page=wps_pro'); ?></div>
-		<div class="description"><br /><strong><? _e('Make sure your forum slug matches your forum page slug.', WPS2_TEXT_DOMAIN); ?></strong><br />
-		<strong><? _e('Your forum page should not have a parent page.', WPS2_TEXT_DOMAIN); ?></strong></div>
+		<div class="description"><br /><strong><?php _e('Make sure your forum slug matches your forum page slug.', WPS2_TEXT_DOMAIN); ?></strong><br />
+		<strong><?php _e('Your forum page should not have a parent page.', WPS2_TEXT_DOMAIN); ?></strong></div>
 	</div> 
 
 	<?php endif;
@@ -143,8 +143,8 @@ function wps_taxonomy_metadata_edit( $tag ) {
 			<br />
 			<span class="description"><?php _e('WordPress page that has this forum\'s shortcodes on.', WPS2_TEXT_DOMAIN); ?>
 			<?php if ($forum_page) { ?> [<a href="post.php?post=<?php echo $forum_page; ?>&action=edit"><?php _e('Edit', WPS2_TEXT_DOMAIN); ?></a>]<?php } ?></span><br />
-			<div class="description"><br /><strong><? _e('Make sure your forum slug matches your forum page slug.', WPS2_TEXT_DOMAIN); ?></strong><br />
-			<strong><? _e('Your forum page should not have a parent page.', WPS2_TEXT_DOMAIN); ?></strong></div>
+			<div class="description"><br /><strong><?php _e('Make sure your forum slug matches your forum page slug.', WPS2_TEXT_DOMAIN); ?></strong><br />
+			<strong><?php _e('Your forum page should not have a parent page.', WPS2_TEXT_DOMAIN); ?></strong></div>
 		</td>
 	</tr> 
 
