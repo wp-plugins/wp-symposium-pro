@@ -7,7 +7,7 @@ Tags: wp symposium pro, social network, social networking, social media, wpsympo
 Requires at least: 3.0
 Tested up to: 3.9.1
 License: GPLv2 or later
-Stable tag: 14.05.19
+Stable tag: 14.05.20
 
 Create your own social network in WordPress! Activity wall, friends, forums, private mail - and more!
 
@@ -70,6 +70,8 @@ For more FAQs, please visit http://www.wpsymposiumpro.com/frequently-asked-quest
 The best way to see it in action, and try it out for free, is visit http://www.wpsymposiumpro.com !
 
 == Changelog ==
+
+14.05.20 Added filters to support WYSIWYG option for Forum Toolbar
 
 14.05.19 Fix for setting "wrench" not appearing on activity
 
