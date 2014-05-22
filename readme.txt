@@ -7,7 +7,7 @@ Tags: wp symposium pro, social network, social networking, social media, wpsympo
 Requires at least: 3.0
 Tested up to: 3.9.1
 License: GPLv2 or later
-Stable tag: 14.05.21
+Stable tag: 14.05.22
 
 Create your own social network in WordPress! Activity wall, friends, forums, private mail - and more!
 
@@ -70,6 +70,9 @@ For more FAQs, please visit http://www.wpsymposiumpro.com/frequently-asked-quest
 The best way to see it in action, and try it out for free, is visit http://www.wpsymposiumpro.com !
 
 == Changelog ==
+
+14.05.22 Added show_closed to [wps_forums], default 1, set to 0 to hide closed posts
+         Improved error checking for avatar upload when creating avatar folder in wp-content/wps-pro-content
 
 14.05.21 Added filters to support new Forum Extensions plugin
 
