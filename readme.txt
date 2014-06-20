@@ -7,7 +7,7 @@ Tags: wp symposium pro, social network, social networking, social media, wpsympo
 Requires at least: 3.0
 Tested up to: 3.9.1
 License: GPLv2 or later
-Stable tag: 14.6.11
+Stable tag: 14.6.20
 
 Create your own social network in WordPress! Activity wall, friends, forums, private mail - and more!
 
@@ -71,6 +71,19 @@ The best way to see it in action, and try it out for free, is visit http://www.w
 
 == Changelog ==
 
+14.6.20  Forums
+         Added pagination to [wps-forum]
+         Added style to highlight unread posts, or posts with new replies since last viewed
+         Added style to highlight posts that user has replied to. Add reply_icon=0 to [wps-forum] shortcode to hide
+              http://www.wpsymposiumpro.com/development-to-do-list/icon-to-show-a-user-they-have-already-posted-on-a-topic/
+         Deleted posts through front-end now put in trash
+
+         Usermeta
+         Added [wps-usermeta-button] shortcode to create button for URL with user ID
+
+         Admin (Setup)
+         After saving under WPS Pro->Setup, expanded section stays expanded
+         
 14.6.11  Removed rogue output when saving edited forum post
 
 14.6.8   GMT should now be used as the 'base' for calculating freshness of content
