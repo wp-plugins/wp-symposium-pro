@@ -31,7 +31,7 @@ function wps_flush_rewrite_rules()
 	$wp_rewrite->flush_rules();
 }
 // Uncomment the following line to force a re-write flush (debugging only)
-add_action( 'init', 'wps_flush_rewrite_rules');
+//add_action( 'init', 'wps_flush_rewrite_rules');
 
 // Add WPS Pro re-write rules
 function wps_forum_insert_rewrite_rules( $rules )
