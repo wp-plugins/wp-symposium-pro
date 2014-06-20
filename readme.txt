@@ -71,7 +71,7 @@ The best way to see it in action, and try it out for free, is visit http://www.w
 
 == Changelog ==
 
--------  Forums
+14.6.20  Forums
          Added pagination to [wps-forum]
          Added style to highlight unread posts, or posts with new replies since last viewed
          Added style to highlight posts that user has replied to. Add reply_icon=0 to [wps-forum] shortcode to hide
