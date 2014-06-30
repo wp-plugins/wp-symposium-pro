@@ -1,0 +1,11 @@
+ul.select2-results {
+	max-height: 400px;
+}
+
+.wps_alerts_activity {
+	font-size: 0.8em;
+}
+
+.wps_alerts_activity .wps_alerts_unread {
+	font-weight: bold;
+}
