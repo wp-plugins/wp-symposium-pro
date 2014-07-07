@@ -7,7 +7,7 @@ Tags: wp symposium pro, social network, social networking, social media, wpsympo
 Requires at least: 3.0
 Tested up to: 3.9.1
 License: GPLv2 or later
-Stable tag: 14.7.4
+Stable tag: 14.7.5
 
 Create your own social network in WordPress! Activity wall, friends, forums, private mail - and more!
 
@@ -70,6 +70,9 @@ For more FAQs, please visit http://www.wpsymposiumpro.com/frequently-asked-quest
 The best way to see it in action, and try it out for free, is visit http://www.wpsymposiumpro.com !
 
 == Changelog ==
+
+14.7.5   Forums: Added include_closed option to [wps-forum-show-posts] (default 1)
+         Setup: Quick Start friends page now includes pending friendship requests
 
 14.7.4   Maintenance Release
 
@@ -287,7 +290,7 @@ The best way to see it in action, and try it out for free, is visit http://www.w
 0.18   Added hook and filter to wps-usermeta-change shortcode (edit profile)
 
 0.17   Added hooks to integrate with WPS Pro setup page
-       Fixed missing file upload load
+       Fixed missing file upload function
 
 0.16   Added wps_get_friends function
 
