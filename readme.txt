@@ -7,7 +7,7 @@ Tags: wp symposium pro, social network, social networking, social media, wpsympo
 Requires at least: 3.0
 Tested up to: 3.9.1
 License: GPLv2 or later
-Stable tag: 14.7.18
+Stable tag: 14.8
 
 Create your own social network in WordPress! Activity wall, friends, forums, private mail - and more!
 
@@ -70,6 +70,12 @@ For more FAQs, please visit http://www.wpsymposiumpro.com/frequently-asked-quest
 The best way to see it in action, and try it out for free, is visit http://www.wpsymposiumpro.com !
 
 == Changelog ==
+
+14.8     Forums: Updated forum-show-posts shortcode with bug fix for multi-site installations
+         Forums: After adding new post, new post is shown (instead of forum posts list)
+          -> http://www.wpsymposiumpro.com/development-to-do-list/after-adding-forum-topic-show-the-topic/
+         Alerts: Added option in setup to disable alerts from being sent out globally
+         Setup: Added warning if profile pages not setup in WPS Pro->Setup->Profile Pages
 
 14.7.18  Friendships: Fixed missing / in URL in the alert sent out
          Change Avatar: Added not_permitted (text) to [wps-avatar-change]
