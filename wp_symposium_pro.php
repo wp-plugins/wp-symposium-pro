@@ -234,7 +234,6 @@ add_filter('widget_text', 'do_shortcode');
 // Init
 add_action('init', 'wps_init');
 add_action('admin_menu', 'wps_menu'); // Located in wps_admin.php
-add_action('admin_menu', 'wps_forum_menu'); // Located in wps_forum_admin.php
 add_action( 'wp_head', 'wps_add_custom_css' );
 add_action( 'wp_footer', 'wps_add_wait_modal_box' );
 
@@ -341,6 +340,7 @@ function wps_rel_canonical_forum_override()
 add_action( 'admin_menu', 'wps_add_forums_menu' );
 function wps_add_forums_menu() {
 	add_submenu_page('wps_pro', __('Forum Setup', WPS2_TEXT_DOMAIN), __('Forum Setup', WPS2_TEXT_DOMAIN), 'manage_options', 'edit-tags.php?taxonomy=wps_forum&post_type=wps_forum_post');
+	add_submenu_page('wps_pro', __('All Forums', WPS2_TEXT_DOMAIN), __('All Forums', WPS2_TEXT_DOMAIN), 'manage_options', 'wpspro_forum_setup', 'wpspro_forum_setup');
 }
 
 

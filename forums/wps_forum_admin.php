@@ -1,10 +1,5 @@
 <?php
 
-function wps_forum_menu() {
-	add_submenu_page('wps_pro_hidden', __('All Forums', WPS2_TEXT_DOMAIN), __('All Forums', WPS2_TEXT_DOMAIN), 'manage_options', 'wpspro_forum_setup', 'wpspro_forum_setup');
-}
-
-
 function wpspro_forum_setup() {
 
   	echo '<div class="wrap">';
