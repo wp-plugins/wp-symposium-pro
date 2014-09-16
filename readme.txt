@@ -71,9 +71,9 @@ The best way to see it in action, and try it out for free, is visit http://www.w
 
 == Changelog ==
 
-14.9     New Forum Administration, a handy single screen to manage all forums
-         Alerts: Link in Friendship request alert now goes to user's page to accept/reject
+14.9     New Forum Administration, a handy single screen to manage all forums (including security if in use)
          Forums: Added no_permission_msg to wps-forum-comment shortcode (relevant to forum security)
+         Alerts: Link in Friendship request alert now goes to user's page to accept/reject
 
 14.8     Forums: Updated forum-show-posts shortcode with bug fix for multi-site installations
          Forums: After adding new post, new post is shown (instead of forum posts list)
