@@ -5,9 +5,9 @@ Donate link: http://www.wpsymposiumpro.com
 Link: http://www.wpsymposiumpro.com
 Tags: wp symposium pro, social network, social networking, social media, wpsymposium pro, wp-symposium, wp symposium, symposium
 Requires at least: 3.0
-Tested up to: 3.9.2
+Tested up to: 4.0
 License: GPLv2 or later
-Stable tag: 14.8
+Stable tag: 14.9
 
 Create your own social network in WordPress! Activity wall, friends, forums, private mail - and more!
 
@@ -70,6 +70,10 @@ For more FAQs, please visit http://www.wpsymposiumpro.com/frequently-asked-quest
 The best way to see it in action, and try it out for free, is visit http://www.wpsymposiumpro.com !
 
 == Changelog ==
+
+14.9     New Forum Administration, a handy single screen to manage all forums
+         Alerts: Link in Friendship request alert now goes to user's page to accept/reject
+         Forums: Added no_permission_msg to wps-forum-comment shortcode (relevant to forum security)
 
 14.8     Forums: Updated forum-show-posts shortcode with bug fix for multi-site installations
          Forums: After adding new post, new post is shown (instead of forum posts list)
