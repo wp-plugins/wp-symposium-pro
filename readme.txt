@@ -7,7 +7,7 @@ Tags: wp symposium pro, social network, social networking, social media, wpsympo
 Requires at least: 3.0
 Tested up to: 4.0
 License: GPLv2 or later
-Stable tag: 14.9
+Stable tag: 14.10
 
 Create your own social network in WordPress! Activity wall, friends, forums, private mail - and more!
 
@@ -71,24 +71,35 @@ The best way to see it in action, and try it out for free, is visit http://www.w
 
 == Changelog ==
 
-14.9     New Forum Administration, a handy single screen to manage all forums (including security if in use)
-         Forums: Added no_permission_msg to wps-forum-comment shortcode (relevant to forum security)
-         Alerts: Link in Friendship request alert now goes to user's page to accept/reject
+14.10    Activity: Members can now hide posts on their activity posted by others
+         Activity: Avatar now shown when adding a comment to activity posts
+         Activity: Can now set number of comments shown with [wps-activity comment_size=x]
+                   Set text with comment_size_text_plural/comment_size_text_singular
+         Forums:   Comments on forum post replies are now available (can be disabled/configured)
+         Forums:   New option in Setup->Forum to set when a forum post automatically closes due to inactivity
+         Misc:     Added wps_is_forum_page($id) core function to check if WordPress page with ID of $id is a forum page
+         Misc:     Added .wps_submit class to all <input type="submit" /> in WPS for quick and easy styling of buttons, eg:
+                         .wps_submit { border: 3px solid red !important; }         
 
-14.8     Forums: Updated forum-show-posts shortcode with bug fix for multi-site installations
-         Forums: After adding new post, new post is shown (instead of forum posts list)
-          -> http://www.wpsymposiumpro.com/development-to-do-list/after-adding-forum-topic-show-the-topic/
-         Alerts: Added option in setup to disable alerts from being sent out globally
-         Setup: Added warning if profile pages not setup in WPS Pro->Setup->Profile Pages
+14.9     Forums:   New Forum Administration, a handy single screen to manage all forums (including security if in use)
+         Forums:   Added no_permission_msg to wps-forum-comment shortcode (relevant to forum security)
+         Alerts:   Link in Friendship request alert now goes to user's page to accept/reject
 
-14.7.18  Friendships: Fixed missing / in URL in the alert sent out
-         Change Avatar: Added not_permitted (text) to [wps-avatar-change]
-         Forum: When deleting comments, back to forum link is now shown
-         Activity: When viewing a post (single view), a message is shown if it doesn't exist. Change with [wps-activity not_found="Nothing to see!"]
-         Increased security of custom post types
+14.8     Forums:   Updated forum-show-posts shortcode with bug fix for multi-site installations
+         Forums:   After adding new post, new post is shown (instead of forum posts list)
+                   -> http://www.wpsymposiumpro.com/development-to-do-list/after-adding-forum-topic-show-the-topic/
+         Alerts:   Added option in setup to disable alerts from being sent out globally
+         Setup:    Added warning if profile pages not setup in WPS Pro->Setup->Profile Pages
 
-14.7.5   Forums: Added include_closed option to [wps-forum-show-posts] (default 1)
-         Setup: Quick Start friends page now includes pending friendship requests
+14.7.18  Avatar:   Added not_permitted (text) to [wps-avatar-change]
+         Friends:  Fixed missing / in URL in the alert sent out
+         Activity: When viewing a post (single view), a message is shown if it doesn't exist.
+                   Change with [wps-activity not_found="Nothing to see!"]
+         Forum:    When deleting comments, back to forum link is now shown
+         Misc:     Increased security of custom post types
+
+14.7.5   Forums:   Added include_closed option to [wps-forum-show-posts] (default 1)
+         Setup:    Quick Start friends page now includes pending friendship requests
 
 14.7.4   Maintenance Release
 
