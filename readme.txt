@@ -33,9 +33,7 @@ No problem! Easily change all the text your users will see through options. Usin
 
 **And there's even more...!**
 
-Extra plugins are available that add features galore! Private mail, groups, choose who to share activity with, image and YouTube attachments, and many more! Please note that these are separate plugins.
-
-And be sure to check out the Show Posts plugin for WP Symposium Pro - show any of your site content, with tons of options, you'll be amazed at how flexible it is!
+Extra extensions are available that add features galore! Private messages, groups, forum subscriptions, choose who to share activity with, image and YouTube attachments, and many (many) more! Please note that these are available as optional extensions via http://www.wpsymposiumpro.com.
 
 **Find out more**
 
