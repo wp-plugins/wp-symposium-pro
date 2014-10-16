@@ -69,7 +69,7 @@ The best way to see it in action, and try it out for free, is visit http://www.w
 
 == Changelog ==
 
-14.10.1  ?
+14.10.1  Change in version number to match WP Symposium Pro (Extensions) update
 
 14.10    Activity: Members can now hide posts on their activity posted by others
          Activity: Avatar now shown when adding a comment to activity posts
