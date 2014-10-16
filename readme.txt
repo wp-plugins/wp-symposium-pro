@@ -7,7 +7,7 @@ Tags: wp symposium pro, social network, social networking, social media, wpsympo
 Requires at least: 3.0
 Tested up to: 4.0
 License: GPLv2 or later
-Stable tag: 14.10
+Stable tag: 14.10.1
 
 Create your own social network in WordPress! Activity wall, friends, forums, private mail - and more!
 
@@ -68,6 +68,8 @@ For more FAQs, please visit http://www.wpsymposiumpro.com/frequently-asked-quest
 The best way to see it in action, and try it out for free, is visit http://www.wpsymposiumpro.com !
 
 == Changelog ==
+
+14.10.1  ?
 
 14.10    Activity: Members can now hide posts on their activity posted by others
          Activity: Avatar now shown when adding a comment to activity posts
