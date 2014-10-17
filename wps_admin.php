@@ -92,7 +92,7 @@ function wpspro_release_notes() {
 						<li>Requests to join private groups must be accepted by group admin (via list of group members)</li>
 						<li>Added text_private to [wps-group-join-button] to inform user that group is private</li>
 						<li>When deleting a group, confirmation is asked for</li>
-                        <li>New shortcode [wps-group-image] to show group image, add to the top of your <strong>Group page</strong> (see below) [14.10.1]</li>
+                        <li>New shortcode [wps-group-image] to show group image, add to the top of your <strong>Group page</strong> [14.10.1]</li>
 					</ol>
 					<h3>Groups (list)</h3>
 					<ol>
