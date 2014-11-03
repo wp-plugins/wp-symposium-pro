@@ -7,7 +7,7 @@ Tags: wp symposium pro, social network, social networking, social media, wpsympo
 Requires at least: 3.0
 Tested up to: 4.0
 License: GPLv2 or later
-Stable tag: 14.10.3
+Stable tag: 14.11
 
 Create your own social network in WordPress! Activity wall, friends, forums, private mail - and more!
 
@@ -68,6 +68,31 @@ For more FAQs, please visit http://www.wpsymposiumpro.com/frequently-asked-quest
 The best way to see it in action, and try it out for free, is visit http://www.wpsymposiumpro.com !
 
 == Changelog ==
+
+14.11    Core: Moved icon color (dark or light) from Profile Page to Core Options (WPS Pro->Setup->Core Options)
+         Core: Added option for external links to open in new window, with optional suffix after external links (WPS Pro->Setup->Core Options)
+         Alerts: can now show alerts as a flag with count [wps-alerts-activity]
+         Alerts: added ability to mark all as read, delete individual alerts and delete all alerts
+         Alerts: added make_all_read_text and delete_all_text (shown with [wps-alerts-activity]
+         Forums: added title_length to [wps-forum], [wps-forums] and [wps_forum_show_posts] to limit characters of forum titles (default, 50)
+         Forums: added show_count, show_last_activity and show_freshess to [wps-forums] and [wps-forum]
+         Forums: removed show_replies from [wps-forum] (replaced with show_count for consistency)
+         Forums: added level_0_links to [wps-forums] set to 0, to disable links for top level forums
+         Forums [wps-forum-show-posts]: changed include_replies option, now used for forum post replies (default 1)
+         Forums [wps-forum-show-posts]: added include_comments option used for forum post reply comments (default 0)
+         Forums [wps-forum-show-posts]: Added options to show summary of forum activity (good for a widget!):
+             summary (whether to show as summary information, default 0)
+             summary_format (if summary=1, format of text, default '%s %s %s %s ago %s')
+                example of output: [simon] [replied to] [This topic] [5 mins] ago [the snippet]
+             summary_started (text for 'started')
+             summary_replied (text for 'replied to')
+             summary_commented (text for 'commented on')
+             summary_title_length (maximum length of title, default 50)
+             summary_snippet_length (maximum length of snippet, default 50, set to 0 to hide)
+             summary_avatar_size (size of avatar, default 32, set to 0 to hide)
+             summary_show_unread (whether to bold topics with unread content, default 1)
+         Friendships: New option (under WPS Pro->Setup->Friendships) to set all site members as friends with each other, always.
+         Friendships: Can add pending friendship requests as a flag with count with [wps-alerts-friends]
 
 14.10.3  Change in version number to match WP Symposium Pro (Extensions) update
 
