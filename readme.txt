@@ -7,7 +7,7 @@ Tags: wp symposium pro, social network, social networking, social media, wpsympo
 Requires at least: 3.0
 Tested up to: 4.0
 License: GPLv2 or later
-Stable tag: 14.11
+Stable tag: 14.12
 
 Create your own social network in WordPress! Activity wall, friends, forums, private mail - and more!
 
@@ -68,6 +68,19 @@ For more FAQs, please visit http://www.wpsymposiumpro.com/frequently-asked-quest
 The best way to see it in action, and try it out for free, is visit http://www.wpsymposiumpro.com !
 
 == Changelog ==
+
+14.12    Core: New shortcode: [wps-close-account]. Displays a button allowing a user to close their account.
+         Core: Added test alert via WPS Pro->Setup->Alerts.
+         Activity: Changed avatar_size option to user_avatar_size for [wps-activity-page]
+         Activity: Added account_closed_msg to [wps-activity-post]         
+         Avatar: Added crop to [wps-avatar-change] to skip cropping step when uploading avatar (suggest uploading square avatar images on site)
+         Avatar: Replaced WordPress crop function with SimpleImage for avatar, for better quality and support for non-JPF format
+         Alerts: Added flag_src to [wps-alerts-activity] and [wps-alerts-friends] to replace icon, use relative or absolute URL
+         Forums: Admin and post owner can move to another forum when replying
+         Forums: Admin does not have to reply to move or close a post
+         Forums: Added count_include_replies to [wps-forums], whether to include replies/comments to forum posts, default 1
+         Forums: Changed default of show_posts_header for [wps-forums] to 0
+         Forums: Can now make private replies on the forum, only visible by forum post author and site administrators. Set allow_private=1 and optionally private_msg to [wps-forum-comment]; also optionally set private_reply_msg to [wps-forum].
 
 14.11    Core: Moved icon color (dark or light) from Profile Page to Core Options (WPS Pro->Setup->Core Options)
          Core: Added option for external links to open in new window, with optional suffix after external links (WPS Pro->Setup->Core Options)
