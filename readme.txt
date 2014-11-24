@@ -5,7 +5,7 @@ Donate link: http://www.wpsymposiumpro.com
 Link: http://www.wpsymposiumpro.com
 Tags: wp symposium pro, social network, social networking, social media, wpsymposium pro, wp-symposium, wp symposium, symposium
 Requires at least: 3.0
-Tested up to: 4.0
+Tested up to: 4.0.1
 License: GPLv2 or later
 Stable tag: 14.12.1
 
