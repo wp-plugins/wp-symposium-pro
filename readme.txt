@@ -7,7 +7,7 @@ Tags: wp symposium pro, social network, social networking, social media, wpsympo
 Requires at least: 3.0
 Tested up to: 4.0
 License: GPLv2 or later
-Stable tag: 14.12
+Stable tag: 14.12.1
 
 Create your own social network in WordPress! Activity wall, friends, forums, private mail - and more!
 
@@ -33,7 +33,7 @@ No problem! Easily change all the text your users will see through options. Usin
 
 **And there's even more...!**
 
-Extra extensions are available that add features galore! Private messages, groups, forum subscriptions, choose who to share activity with, image and YouTube attachments, and many (many) more! Please note that these are available as optional extensions via http://www.wpsymposiumpro.com.
+Extra extensions are available that add features galore! Private messages, groups, forum subscriptions, choose who to share activity with, image and YouTube attachments, galleries, chat lounge, profile security and many (many) more! Please note that these are available as optional extensions via http://www.wpsymposiumpro.com.
 
 **Find out more**
 
@@ -55,6 +55,8 @@ Then click on the "Add Forum" button for as many forums as you want!
 
 You may then want to add your new WordPress pages to your site menu via Appearance->Menus.
 
+An online book is available via http://www.wpsymposiumpro.com/book that covers all topics from beginner to expert.
+
 To manually install, download the ZIP file, extract contents and place in wp_content/wp-symposium-pro folder.
 
 == Frequently Asked Questions ==
@@ -68,6 +70,8 @@ For more FAQs, please visit http://www.wpsymposiumpro.com/frequently-asked-quest
 The best way to see it in action, and try it out for free, is visit http://www.wpsymposiumpro.com !
 
 == Changelog ==
+
+14.12.1  Fixed layout issue with activity posts for gallery items
 
 14.12    Core: New shortcode: [wps-close-account]. Displays a button allowing a user to close their account.
          Core: Added test alert via WPS Pro->Setup->Alerts.
