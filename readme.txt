@@ -5,9 +5,9 @@ Donate link: http://www.wpsymposiumpro.com
 Link: http://www.wpsymposiumpro.com
 Tags: wp symposium pro, social network, social networking, social media, wpsymposium pro, wp-symposium, wp symposium, symposium
 Requires at least: 3.0
-Tested up to: 4.0.1
+Tested up to: 4.1
 License: GPLv2 or later
-Stable tag: 14.12.1
+Stable tag: 14.12.2
 
 Create your own social network in WordPress! Activity wall, friends, forums, private mail - and more!
 
@@ -70,6 +70,15 @@ For more FAQs, please visit http://www.wpsymposiumpro.com/frequently-asked-quest
 The best way to see it in action, and try it out for free, is visit http://www.wpsymposiumpro.com !
 
 == Changelog ==
+
+14.12.2  Activity: Added additional paramter to wps_activity_item_filter (see Hooks and Filters index in book)
+         Activity: Added stick_others as option to [wps-activity] to choose whether other's sticky posts stick on own activity stream
+         Activity: Site admin's can now stick/delete/hide all activity posts
+         Activity: Fixed ability to delete comments (to activity posts) by comment owner, parent post owner or site admin
+         Messages: Renamed duplicate private_msg to private_reply_check_msg ("Only share reply with %s")
+         Avatar: cropping step is skipped if using a mobile device (due to dependency on software library used)
+         API: Added core API file for functions that developers will find useful
+         API: core API function wps_insert_activity_post to insert an activity post (see Core Functions chapter in book)
 
 14.12.1  Fixed layout issue with activity posts for gallery items
 
