@@ -7,7 +7,7 @@ Tags: wp symposium pro, social network, social networking, social media, wpsympo
 Requires at least: 3.0
 Tested up to: 4.1
 License: GPLv2 or later
-Stable tag: 14.12.2
+Stable tag: 15.1
 
 Create your own social network in WordPress! Activity wall, friends, forums, private mail - and more!
 
@@ -71,7 +71,26 @@ The best way to see it in action, and try it out for free, is visit http://www.w
 
 == Changelog ==
 
-14.12.2  Activity: Added additional paramter to wps_activity_item_filter (see Hooks and Filters index in book)
+15.1     New style option for forums to offer alternative layouts, with following new options for [wps-forum]:
+            'style' => 'table' (look and feel, table|classic, set to classic for alternative layout)
+            'started' => 'Started by %s %s'
+            'replied' => 'Last replied to by %s %s'
+            'commented' => 'Last commented on by %s %s'
+            'size_posts' => 96
+            'size_replies' => 48
+            'post_preview' => 250
+            'reply_preview' => 120
+            'view_count_label' => 'VIEW' (singular)
+            'views_count_label' => VIEWS' (plural)
+            'reply_count_label' => 'REPLY' (singular)
+            'replies_count_label' => 'REPLIES' (plural)
+         Note that views starting counting from installation, and exclude post owner views of the post
+         Add a featured image to forums (WPS Pro->Forum Setup->Edit) to include with [wps-forums]. Also added featured_image_width as an option (px).
+         To hide town and country from edit profile set shortcode option town="" and country="" (or just one of them as applicable)
+         Added wps_activity_post_post_form_filter filter to [wps-activity-post]
+         Users are not subscribed to activity alerts by default, to support local laws about opting in
+
+14.12.2  Activity: Added additional parameter to wps_activity_item_filter (see Hooks and Filters index in book)
          Activity: Added stick_others as option to [wps-activity] to choose whether other's sticky posts stick on own activity stream
          Activity: Site admin's can now stick/delete/hide all activity posts
          Activity: Fixed ability to delete comments (to activity posts) by comment owner, parent post owner or site admin
