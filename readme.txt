@@ -7,7 +7,7 @@ Tags: wp symposium pro, social network, social networking, social media, wpsympo
 Requires at least: 3.0
 Tested up to: 4.1
 License: GPLv2 or later
-Stable tag: 15.1
+Stable tag: 15.1.1
 
 Create your own social network in WordPress! Activity wall, friends, forums, private mail - and more!
 
@@ -70,6 +70,8 @@ For more FAQs, please visit http://www.wpsymposiumpro.com/frequently-asked-quest
 The best way to see it in action, and try it out for free, is visit http://www.wpsymposiumpro.com !
 
 == Changelog ==
+
+15.1.1   Fixed bug with forum pagination
 
 15.1     New style option for forums to offer alternative layouts, with following new options for [wps-forum]:
             'style' => 'table' (look and feel, table|classic, set to classic for alternative layout)
