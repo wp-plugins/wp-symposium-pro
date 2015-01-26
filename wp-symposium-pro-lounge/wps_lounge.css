@@ -1,0 +1,32 @@
+#wps_lounge {
+	width:100%;
+	margin-bottom:10px;
+	-webkit-box-sizing: border-box; /* Safari/Chrome, other WebKit */
+	-moz-box-sizing: border-box;    /* Firefox, other Gecko */
+	box-sizing: border-box;         /* Opera/IE 8+ */	
+    overflow: auto;
+}
+
+.wps_lounge_chat_div {
+    margin-bottom: 6px;
+}
+
+.wps_lounge_added_by {
+    font-style: italic;
+    font-size: 0.8em;
+}
+
+#wps_lounge_chat {
+    width: 100%;
+    margin-bottom: 10px;    
+}
+
+#wps_lounge_chat_pending {
+    opacity: 0.5;
+    font-size: 0.8em;
+    font-style: italic;
+}
+
+#wps_lounge_chat_pending_chat {
+    display: none;
+}
