@@ -25,11 +25,11 @@ function wpspro_release_notes() {
 	  		<img style="float:right; margin-left: 50px; margin-bottom: 50px;" src='<?php echo plugins_url( '', __FILE__ ); ?>/css/images/wps_logo.png' />
 	  		<div style="font-size:2em; line-height:1.6em; color: #510051; font-weight: bold;">WP Symposium Pro Release Notes (<?php echo get_option('wp_symposium_pro_ver'); ?>)</div>
 
-            <p><strong>If you are new to WP Symposium Pro, you will want to vist the <a href="<?php echo admin_url('admin.php?page=wps_pro_setup'); ?>">WPS Pro->Setup</a> page.</strong> On there, you will also find some helpful videos and links for support.
+            <p><strong>If you are new to WP Symposium Pro, you will want to vist the <a href="<?php echo admin_url('admin.php?page=wps_pro_setup'); ?>">WPS Pro->Setup</a> page.</strong>
 	  		These release notes, and previous release notes, are available on the <a href="http://www.wpsymposiumpro.com/blog" target="_blank">WP Symposium Pro blog</a>.</p>
 
             <p>
-            Released on my birthday! This release focuses on the forum adding likes/dislikes, and the ability to mark a forum reply as an answer (if it suits the style of the forum).
+            Don't forget to like our <a href="https://www.facebook.com/wpsymposium" target="_blank">Facebook page</a>, or follow @wpsymposium on <a href="http://twitter.com/wpsymposium" target="_blank">Twitter</a>, to get all the latest news in between releases.
             </p>
 
 			<em><strong>Simon, WP Symposium developer</strong></em></p>
@@ -39,7 +39,7 @@ function wpspro_release_notes() {
                 <img src="<?php echo plugins_url( '', __FILE__ ); ?>/css/images/a_complete_guide_to_wp_symposium_pro.jpg" style="margin-right: 10px; float: left" />
                 <div>
                     <div style="font-size:1.5em; line-height:1.2em; color: #510051; font-weight: bold;">The Complete Guide To WP Symposium Pro</div>
-                    <p>A new book is being produced that you can <a href="http://www.wpsymposiumpro.com/a-complete-guide-to-wp-symposium-pro-book/">access online right now</a>! It's work in progress, but as it's nearing completion it will be of use now, so early access is available. It covers the core plugin, all the extensions and information for developers, up to the latest official release. To put everything in one place, this will, from 15.1 release, replace all the individual How-To help web pages. It is formatted such that it will also be available as a published print book when complete.</p>
+                    <p>A new book has been produced that you can <a target="_blank" href="http://www.wpsymposiumpro.com/a-complete-guide-to-wp-symposium-pro-book/">access online right now</a>! It's work in progress, but as it's nearing completion it will be of use now, so early access is available. It covers the core plugin, all the extensions and information for developers, up to the latest official release. To put everything in one place, this will, from 15.1 release, replace all the individual How-To help web pages. It is formatted such that it will also be available as a published print book when complete.</p>
                 </div>
 
             <div style="clear:both; border-bottom: 1px dotted #510051; padding-top: 20px; margin-bottom: 20px;"></div>
@@ -50,15 +50,14 @@ function wpspro_release_notes() {
 					<div style="font-size:1.6em; line-height:1.6em; color: #510051; font-weight: bold;">Core WP Symposium Pro plugin</div>
 					<a href="http://www.wordpress.org/plugins/wp-symposium-pro" target-"_blank">Available from the WordPress repository</a><br />
 
+                    <h3>Edit Profile</h3>
+                    <p>Firstname and Surname fields are now included, change the label with [wps-usermeta-change name="New label"]. Set name="" to hide.</p>
+                    
                     <h3>Forums</h3>
                     <p>Added a new multiline option to [wps-forum-post] so you can set new forum post titles to have multiple lines. For example, multiline="3" to show three lines. Note, does not set the maximum number permitted, only the space initially shown to the user.</p>
                     
                     <h3>Activity</h3>
-                    <p>Added logged_out_msg and login_url options for [wps-activity] (for message shown in place of activity when not logged in). The login_url option requires the Login &amp; Register Extension to be activated.</p>
                     <p>When an activity post or comment is deleted (by the owner or administrator), the corresponding alerts are deleted. However, emails may already have been sent depending on the alerts schedule.</p>
-                    
-                    <h3>Admin Tips</h3>
-                    <p>Started to introduce helpful admin tips on the front end (can be dismissed, and only shown to site administrators)</p>
                     
 				</td>
 				<td style="width:5%">&nbsp;</td>
@@ -74,12 +73,18 @@ function wpspro_release_notes() {
                     <p>Set a reply as an answer. Includes new rewards. Main option for [wps-forum] is allow_answer="1". Cannot select own answers. Rewards are removed if answer is unset. Guide will be updated for release.</p>
                     
                     <h3>Groups</h3>
-                    <p>New default layout for group pages (you can delete existing and re-create via WPS Pro->Setup).</p>
+                    <p>New default layout for group pages (you can delete existing and re-create via WPS Pro->Setup, but make sure you also delete from Trash before re-creating).</p>
                     <p>[wps_my_groups] shortcode now picks up if on a user's profile page to show their groups.</p>
                     
-                    <h3>YouTube (Activity/Forum)</h3>
+                    <h3>YouTube (Activity and Forum)</h3>
                     <p>Paste a YouTube URL in an activity or forum comment, and the video will now show there too.</p>
-                                        
+
+
+                    <h3>Login &amp; Register</h3>
+                    <p>If you have the Login &amp; Register extension activated, a message is shown on the Edit Profile, Change Avatar and Friends page, saying to a logged out user, that they should login to view the page.</p>
+                    <p>You can change the message with the logged_out_msg shortcode option, and set the URL of the link to the login page with the login_url shortcode options. Set logged_out_msg to "" to hide the message.</p>
+                    <p>Applies to [wps-usermeta-change] (Edit Profile), [wps-avatar-change] (Change Avatar) and [wps-friends] (Friends).</p>
+                    <p><em>Personally, I would also use a plugin (like <a href="http://www.wordpress.org/plugins/menu-items-visibility-control" target="_blank">Menu Item Visibility Control</a> or <a href="http://www.wordpress.org/plugins/if-menu" target="_blank">If Menu</a>) to hide the pages from the menu if the user has not logged in as it looks better.</em></p>
 				</td>
 			</tr></table>
 

@@ -134,31 +134,38 @@ function wps_usermeta_change($atts) {
 	global $current_user;
 	$html = '';
 
+    // Shortcode parameters
+    extract( shortcode_atts( array(
+        'meta_class' => 'wps_usermeta_change_label',
+        'user_id' => 0,
+        'class' => '',
+        'label' => __('Update', WPS2_TEXT_DOMAIN),
+        'town' => __('Town/City', WPS2_TEXT_DOMAIN),
+        'country' => __('Country', WPS2_TEXT_DOMAIN),
+        'displayname' => __('Display Name', WPS2_TEXT_DOMAIN),
+        'name' => __('Your first name and family name', WPS2_TEXT_DOMAIN),
+        'password' => __('Change your password', WPS2_TEXT_DOMAIN),
+        'password2' => __('Re-type your password', WPS2_TEXT_DOMAIN),
+        'password_msg' => __('Password changed, please log in again.', WPS2_TEXT_DOMAIN),
+        'email' => __('Email address', WPS2_TEXT_DOMAIN),
+        'logged_out_msg' => __('You must be logged in to view this page.', WPS2_TEXT_DOMAIN),
+        'login_url' => '',
+        'after' => '',
+        'before' => '',
+
+    ), $atts, 'wps_usermeta' ) );
+
 	if (is_user_logged_in()) {
-
-		// Shortcode parameters
-		extract( shortcode_atts( array(
-			'meta_class' => 'wps_usermeta_change_label',
-			'user_id' => 0,
-			'class' => '',
-			'label' => __('Update', WPS2_TEXT_DOMAIN),
-			'town' => __('Town/City', WPS2_TEXT_DOMAIN),
-			'country' => __('Country', WPS2_TEXT_DOMAIN),
-			'displayname' => __('Display Name', WPS2_TEXT_DOMAIN),
-			'password' => __('Change your password', WPS2_TEXT_DOMAIN),
-			'password2' => __('Re-type your password', WPS2_TEXT_DOMAIN),
-			'password_msg' => __('Password changed, please log in again.', WPS2_TEXT_DOMAIN),
-			'email' => __('Email address', WPS2_TEXT_DOMAIN),
-			'after' => '',
-			'before' => '',
-
-		), $atts, 'wps_usermeta' ) );
-		
+    
 		if (!$user_id)
 			$user_id = wps_get_user_id();
 
 		$user_can_see_profile = ($current_user->ID == $user_id || current_user_can('manage_options')) ? true : false;
 
+        if (current_user_can('manage_options') && !$login_url && function_exists('wps_login_init')):
+            $html = wps_admin_tip($html, 'wps_usermeta_change', __('Add login_url="/example" to the [wps-usermeta-change] shortcode to let users login and redirect back here when not logged in.', WPS2_TEXT_DOMAIN));
+        endif;    
+        
 		if ($user_can_see_profile):
 
 			// Update if POSTing
@@ -167,6 +174,11 @@ function wps_usermeta_change($atts) {
 				if ($display_name = $_POST['wpspro_display_name'])
 					wp_update_user( array ( 'ID' => $user_id, 'display_name' => $display_name ) ) ;
 
+				if ($first_name = $_POST['wpspro_firstname'])
+					wp_update_user( array ( 'ID' => $user_id, 'first_name' => $first_name ) ) ;
+				if ($last_name = $_POST['wpspro_lastname'])
+					wp_update_user( array ( 'ID' => $user_id, 'last_name' => $last_name ) ) ;
+        
 				if ($user_email = $_POST['wpspro_email'])
 					wp_update_user( array ( 'ID' => $user_id, 'user_email' => $user_email ) ) ;
 
@@ -199,6 +211,16 @@ function wps_usermeta_change($atts) {
 						$form_html .= '<input type="text" id="wpspro_display_name" name="wpspro_display_name" value="'.$value.'" />';
 						$form_html .= '</div>';
 
+                    if ($name):
+                        $firstname = isset($_POST['wpspro_firstname']) ? $_POST['wpspro_firstname'] : $the_user->first_name;
+                        $lastname = isset($_POST['wpspro_lastname']) ? $_POST['wpspro_lastname'] : $the_user->last_name;
+                        $form_html .= '<div class="wps_usermeta_change_item">';
+                            $form_html .= '<div class="'.$meta_class.'">'.$name.'</div>';
+                            $form_html .= '<div class="wps_usermeta_change_name"><input type="text" name="wpspro_firstname" value="'.$firstname.'"> ';
+                            $form_html .= '<input type="text" name="wpspro_lastname" value="'.$lastname.'">'.$mandatory.'</div>';
+                        $form_html .= '</div>';
+                    endif;
+        
 					$value = isset($_POST['wpspro_email']) ? $_POST['wpspro_email'] : $the_user->user_email;
 						$form_html .= '<div class="wps_usermeta_change_item">';
 						$form_html .= '<div class="'.$meta_class.'">'.$email.'</div>';
@@ -244,7 +266,16 @@ function wps_usermeta_change($atts) {
 
 		if ($html) $html = htmlspecialchars_decode($before).$html.htmlspecialchars_decode($after);
 
-	}
+    } else {
+
+        if (!is_user_logged_in() && $logged_out_msg):
+            $query = wps_query_mark(get_bloginfo('url').$login_url);
+            if ($login_url) $html .= sprintf('<a href="%s%s%sredirect=%s">', get_bloginfo('url'), $login_url, $query, wps_root( $_SERVER['REQUEST_URI'] ));
+            $html .= $logged_out_msg;
+            if ($login_url) $html .= '</a>';
+        endif;
+    
+    }
 
 	return $html;
 

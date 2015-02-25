@@ -667,7 +667,7 @@ function wps_activity($atts) {
 
         if (!is_user_logged_in() && $logged_out_msg):
             $query = wps_query_mark(get_bloginfo('url').$login_url);
-            if ($login_url) $html .= sprintf('<a href="%s%s%sredirect=%s">', get_bloginfo('url'), $login_url, $query, site_url( $_SERVER['REQUEST_URI'] ));
+            if ($login_url) $html .= sprintf('<a href="%s%s%sredirect=%s">', get_bloginfo('url'), $login_url, $query, wps_root( $_SERVER['REQUEST_URI'] ));
             $html .= $logged_out_msg;
             if ($login_url) $html .= '</a>';
         endif;

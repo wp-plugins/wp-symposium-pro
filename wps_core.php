@@ -467,4 +467,11 @@ function wps_admin_tip($html, $tip, $msg) {
     endif;
     return $html;
 }
+
+// Global function for site URL, so that it can be filtered by others
+function wps_root($url) {
+    $url = site_url($url);
+    $url = apply_filters( 'wps_pro_root_filter', $url );
+	return $url;
+}
 ?>

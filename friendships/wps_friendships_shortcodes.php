@@ -142,6 +142,8 @@ function wps_friends($atts) {
 		'private' => __('Private information', WPS2_TEXT_DOMAIN),
 		'none' => __('No friends', WPS2_TEXT_DOMAIN),
 		'layout' => 'list', // list|fluid
+        'logged_out_msg' => __('You must be logged in to view this page.', WPS2_TEXT_DOMAIN),
+        'login_url' => '',        
 		'before' => '',
 		'after' => '',
 	), $atts, 'wps_friends' ) );
@@ -149,108 +151,125 @@ function wps_friends($atts) {
 	if (!$user_id)
 		$user_id = wps_get_user_id();
 
-	$friends = wps_are_friends($current_user->ID, $user_id);
-	// By default same user, and friends of user, can see profile
-	$user_can_see_friends = ($current_user->ID == $user_id || $friends['status'] == 'publish') ? true : false;
-	$user_can_see_friends = apply_filters( 'wps_check_friends_security_filter', $user_can_see_friends, $user_id, $current_user->ID );
+    if (is_user_logged_in()) {
+        
+        if (current_user_can('manage_options') && !$login_url && function_exists('wps_login_init')):
+            $html = wps_admin_tip($html, 'wps_friends', __('Add login_url="/example" to the [wps-friends] shortcode to let users login and redirect back here when not logged in.', WPS2_TEXT_DOMAIN));
+        endif;                
+    
+        $friends = wps_are_friends($current_user->ID, $user_id);
+        // By default same user, and friends of user, can see profile
+        $user_can_see_friends = ($current_user->ID == $user_id || $friends['status'] == 'publish') ? true : false;
+        $user_can_see_friends = apply_filters( 'wps_check_friends_security_filter', $user_can_see_friends, $user_id, $current_user->ID );
 
-	if ($user_can_see_friends):
+        if ($user_can_see_friends):
 
-		global $wpdb;
-        if (!get_option('wps_friendships_all')):
-            $sql = "SELECT p.ID, m1.meta_value as wps_member1, m2.meta_value as wps_member2
-                FROM ".$wpdb->prefix."posts p 
-                LEFT JOIN ".$wpdb->prefix."postmeta m1 ON p.ID = m1.post_id
-                LEFT JOIN ".$wpdb->prefix."postmeta m2 ON p.ID = m2.post_id
-                WHERE p.post_type='wps_friendship'
-                  AND p.post_status='publish'
-                  AND m1.meta_key = 'wps_member1'
-                  AND m2.meta_key = 'wps_member2'
-                  AND (m1.meta_value = %d OR m2.meta_value = %d)";
-            $get_friends = $wpdb->get_results($wpdb->prepare($sql, $user_id, $user_id));
+            global $wpdb;
+            if (!get_option('wps_friendships_all')):
+                $sql = "SELECT p.ID, m1.meta_value as wps_member1, m2.meta_value as wps_member2
+                    FROM ".$wpdb->prefix."posts p 
+                    LEFT JOIN ".$wpdb->prefix."postmeta m1 ON p.ID = m1.post_id
+                    LEFT JOIN ".$wpdb->prefix."postmeta m2 ON p.ID = m2.post_id
+                    WHERE p.post_type='wps_friendship'
+                      AND p.post_status='publish'
+                      AND m1.meta_key = 'wps_member1'
+                      AND m2.meta_key = 'wps_member2'
+                      AND (m1.meta_value = %d OR m2.meta_value = %d)";
+                $get_friends = $wpdb->get_results($wpdb->prepare($sql, $user_id, $user_id));
+            else:
+                $sql = "SELECT ID, ID as wps_member1, %d as wps_member2 
+                        FROM ".$wpdb->prefix."users WHERE ID != %d";
+                $get_friends = $wpdb->get_results($wpdb->prepare($sql, $user_id, $user_id));
+            endif;
+
+            if ($get_friends):
+
+                // Put into array so they can be sorted
+                $friends = array();
+                foreach ($get_friends as $friend):
+                    $row_array = array();
+                    $other_member = $friend->wps_member1 == $user_id ? $friend->wps_member2 : $friend->wps_member1;
+                    if (!wps_is_account_closed($other_member)):
+                        $row_array['friend_id'] = $other_member;
+                        $row_array['last_active'] = strtotime(get_user_meta($other_member, 'wpspro_last_active', true));
+                        array_push($friends,$row_array);
+                    endif;
+                endforeach;
+
+                // Sort friends by when last active
+                $sort = array();
+                $order = 'last_active';
+                $orderby = 'DESC';
+                foreach($friends as $k=>$v) {
+                    $sort[$order][$k] = $v[$order];
+                }
+                $orderby = $orderby == "ASC" ? SORT_ASC : SORT_DESC;
+                array_multisort($sort[$order], $orderby, $friends);
+
+                // Show $count number of friends
+                $c=0;
+                foreach ($friends as $friend):
+
+                    $the_friend = get_user_by('id', $friend['friend_id']);
+                    if ($the_friend):
+
+                        // Get profile_security of the_friend
+                        $user_can_see_friend = true;
+                        $user_can_see_friend = apply_filters( 'wps_check_friends_security_filter', $user_can_see_friend, $friend['friend_id'], $current_user->ID );
+
+                        if ($user_can_see_friend):
+
+                            $html .= '<div id="wps_friends"';
+                                if ($layout == 'fluid') $html .= ' style="min-width: 235px; float:left;"';
+                                $html .= '>';
+
+                                $html .= '<div class="wps_friends_friend" style="position:relative;padding-left: '.($size+10).'px">';
+                                if ($size):
+                                    $html .= '<div class="wps_friends_friend_avatar" style="margin-left: -'.($size+10).'px">';
+                                        $html .= wps_friend_avatar($friend['friend_id'], $size, $link);
+                                    $html .= '</div>';
+                                endif;
+                                $html .= '<div class="wps_friends_friend_avatar_display_name">';
+                                    $html .= wps_display_name(array('user_id'=>$friend['friend_id'], 'link'=>$link));
+                                $html .= '</div>';
+                                if ($show_last_active && $friend['last_active']):
+                                    $html .= '<div class="wps_friends_friend_avatar_last_active">';
+                                        $html .= $last_active_text.' ';
+                                        $html .= sprintf($last_active_format, human_time_diff($friend['last_active'], current_time('timestamp', 1)), WPS2_TEXT_DOMAIN);
+                                    $html .= '</div>';
+                                endif;
+                                $html .= '</div>';
+
+                            $html .= '</div>';
+
+                        endif;
+
+                    endif;
+
+                    $c++;
+                    if ($c == $count) break;		
+                endforeach;
+            else:
+                if ($user_id) $html .= $none;
+            endif;
+
         else:
-            $sql = "SELECT ID, ID as wps_member1, %d as wps_member2 
-                    FROM ".$wpdb->prefix."users WHERE ID != %d";
-            $get_friends = $wpdb->get_results($wpdb->prepare($sql, $user_id, $user_id));
+
+            if ($user_id) $html .= '<div id="wps_friends_private_msg">'.$private.'</div>';
+
         endif;
-            
-		if ($get_friends):
 
-			// Put into array so they can be sorted
-			$friends = array();
-			foreach ($get_friends as $friend):
-				$row_array = array();
-			    $other_member = $friend->wps_member1 == $user_id ? $friend->wps_member2 : $friend->wps_member1;
-                if (!wps_is_account_closed($other_member)):
-                    $row_array['friend_id'] = $other_member;
-                    $row_array['last_active'] = strtotime(get_user_meta($other_member, 'wpspro_last_active', true));
-                    array_push($friends,$row_array);
-                endif;
-			endforeach;
-
-			// Sort friends by when last active
-			$sort = array();
-			$order = 'last_active';
-			$orderby = 'DESC';
-			foreach($friends as $k=>$v) {
-			    $sort[$order][$k] = $v[$order];
-			}
-			$orderby = $orderby == "ASC" ? SORT_ASC : SORT_DESC;
-			array_multisort($sort[$order], $orderby, $friends);
-
-			// Show $count number of friends
-			$c=0;
-			foreach ($friends as $friend):
-
-				$the_friend = get_user_by('id', $friend['friend_id']);
-				if ($the_friend):
-
-					// Get profile_security of the_friend
-					$user_can_see_friend = true;
-					$user_can_see_friend = apply_filters( 'wps_check_friends_security_filter', $user_can_see_friend, $friend['friend_id'], $current_user->ID );
-
-					if ($user_can_see_friend):
-
-						$html .= '<div id="wps_friends"';
-							if ($layout == 'fluid') $html .= ' style="min-width: 235px; float:left;"';
-							$html .= '>';
-					
-							$html .= '<div class="wps_friends_friend" style="position:relative;padding-left: '.($size+10).'px">';
-							if ($size):
-								$html .= '<div class="wps_friends_friend_avatar" style="margin-left: -'.($size+10).'px">';
-									$html .= wps_friend_avatar($friend['friend_id'], $size, $link);
-								$html .= '</div>';
-							endif;
-							$html .= '<div class="wps_friends_friend_avatar_display_name">';
-								$html .= wps_display_name(array('user_id'=>$friend['friend_id'], 'link'=>$link));
-							$html .= '</div>';
-							if ($show_last_active && $friend['last_active']):
-								$html .= '<div class="wps_friends_friend_avatar_last_active">';
-									$html .= $last_active_text.' ';
-									$html .= sprintf($last_active_format, human_time_diff($friend['last_active'], current_time('timestamp', 1)), WPS2_TEXT_DOMAIN);
-								$html .= '</div>';
-							endif;
-							$html .= '</div>';
-
-						$html .= '</div>';
-
-					endif;
-
-				endif;
-
-				$c++;
-				if ($c == $count) break;		
-			endforeach;
-		else:
-			if ($user_id) $html .= $none;
-		endif;
-
-	else:
-
-        if ($user_id) $html .= '<div id="wps_friends_private_msg">'.$private.'</div>';
-
-	endif;
-
+    } else {
+        
+        if (!is_user_logged_in() && $logged_out_msg):
+            $query = wps_query_mark(get_bloginfo('url').$login_url);
+            if ($login_url) $html .= sprintf('<a href="%s%s%sredirect=%s">', get_bloginfo('url'), $login_url, $query, wps_root( $_SERVER['REQUEST_URI'] ));
+            $html .= $logged_out_msg;
+            if ($login_url) $html .= '</a>';
+        endif;
+        
+    }
+    
 	if ($html) $html = htmlspecialchars_decode($before).$html.htmlspecialchars_decode($after);
 
 	return $html;

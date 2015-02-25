@@ -938,7 +938,7 @@ function wps_forum($atts) {
 			$public = wps_get_term_meta($term->term_id, 'wps_forum_public', true);
 			if (!$public && !is_user_logged_in()) {
 				$query = wps_query_mark(get_bloginfo('url').$login_url);
-				if ($login_url) $html .= sprintf('<a href="%s%s%sredirect=%s">', get_bloginfo('url'), $login_url, $query, site_url( $_SERVER['REQUEST_URI'] ));
+				if ($login_url) $html .= sprintf('<a href="%s%s%sredirect=%s">', get_bloginfo('url'), $login_url, $query, wps_root( $_SERVER['REQUEST_URI'] ));
 				$html .= $private_msg;
 				if ($login_url) $html .= '</a>';
 			} else {

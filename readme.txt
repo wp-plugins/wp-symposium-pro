@@ -75,11 +75,14 @@ The best way to see it in action, and try it out for free, is visit http://www.w
          Groups: Fix to order_by option for [wps-groups]
          Activity: Added logged_out_msg and login_url (for message shown on activity when not logged in)
          Activity: When deleting an activity post or comment, corresponding alerts are deleted (emails may already have been sent!)
-         added wps_forum_item_pre_comment_filter
-         Started to introduce helpful admin tips on front end (can be dismissed and only shown to site administrators)
+         Edit Profile: Added name as option to [wps-usermeta-change], set to "" to hide
+         Edit Profile: Added logged_out_msg and login_url to [wps-usermeta-change]
+         Change Avatar: Added logged_out_msg and login_url to [wps-avatar-change]
+         Friends: Added logged_out_msg and login_url to [wps-friends]
          Filter: Changed apply_filters( 'wps_forum_item_content_filter', $post_content, $post, $atts )
          Filter: Changed apply_filters( 'wps_forum_item_sub_comment_content_filter', $sub_comment_content, $subcomment, $atts )
-
+         Started to introduce helpful admin tips on front end (can be dismissed and only shown to site administrators)
+         
 15.1.2   Fixed bug stopping images being inserted into posts/pages via media library
 15.1.1   Fixed bug with forum pagination
 
