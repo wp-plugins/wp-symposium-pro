@@ -7,7 +7,7 @@ Tags: wp symposium pro, social network, social networking, social media, wpsympo
 Requires at least: 3.0
 Tested up to: 4.1.1
 License: GPLv2 or later
-Stable tag: 15.2
+Stable tag: 15.4
 
 Create your own social network in WordPress! Activity wall, friends, forums, private mail - and more!
 
@@ -70,6 +70,11 @@ For more FAQs, please visit http://www.wpsymposiumpro.com/frequently-asked-quest
 The best way to see it in action, and try it out for free, is visit http://www.wpsymposiumpro.com !
 
 == Changelog ==
+
+15.4     Alerts: Added option to delete all from drop-down alerts list (change with [wps-alerts-activity delete_all_text="example"]
+         Alerts: Added option to remove alert from list, when clicked on, ie. [wps-alerts-activity delete_on_click="1"]
+         Forums: Renamed wps_forum_comment_add_hook hook to wps_forum_reply_add_hook.
+         Dashboard: WPS icon only shown on All Users page to administrators (to counter some plugins)
 
 15.2     Forums: Added multiline as option to [wps-forum-post] to control lines in forum post title
          Groups: Fix to order_by option for [wps-groups]
