@@ -5,9 +5,9 @@ Donate link: http://www.wpsymposiumpro.com
 Link: http://www.wpsymposiumpro.com
 Tags: wp symposium pro, social network, social networking, social media, wpsymposium pro, wp-symposium, wp symposium, symposium
 Requires at least: 3.0
-Tested up to: 4.1.1
+Tested up to: 4.2.1
 License: GPLv2 or later
-Stable tag: 15.4
+Stable tag: 15.5
 
 Create your own social network in WordPress! Activity wall, friends, forums, private mail - and more!
 
@@ -70,6 +70,17 @@ For more FAQs, please visit http://www.wpsymposiumpro.com/frequently-asked-quest
 The best way to see it in action, and try it out for free, is visit http://www.wpsymposiumpro.com !
 
 == Changelog ==
+
+15.5     Admin: New Shortcodes section to easily view and change all the settings for WP Symposium Pro shortcodes!
+         Admin: Add styles to all shortcodes (can avoid with styles="0" on a shortcode)
+         Edit Profile: Organise into Tabs via new WPS Pro->Setup section for Edit Profile
+         Activity: Added background_icon as option to [wps-activity-post]
+         Forum: Removed limit of 10 comments shown on forum replies
+         Forum: Fixed bug with show_closed on [wps-forum] shortcode
+         Forums: Added show_closed as new option to [wps-forums]         
+         Profile: Added link as option to [wps-usermeta] (if meta value is user_email)
+         Profile: Added the following as valid for meta option for [wps-usermeta]: 'display_name', 'user_login', 'user_nicename', 'user_email', 'user_url', 'user_registered', 'user_status'
+         System: Resets alert cron job after plugin activation (eg. after updates)
 
 15.4     Alerts: Added option to delete all from drop-down alerts list (change with [wps-alerts-activity delete_all_text="example"]
          Alerts: Added option to remove alert from list, when clicked on, ie. [wps-alerts-activity delete_on_click="1"]
