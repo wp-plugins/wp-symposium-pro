@@ -7,7 +7,7 @@ Tags: wp symposium pro, social network, social networking, social media, wpsympo
 Requires at least: 3.0
 Tested up to: 4.2.1
 License: GPLv2 or later
-Stable tag: 15.5
+Stable tag: 15.7
 
 Create your own social network in WordPress! Activity wall, friends, forums, private mail - and more!
 
@@ -70,6 +70,9 @@ For more FAQs, please visit http://www.wpsymposiumpro.com/frequently-asked-quest
 The best way to see it in action, and try it out for free, is visit http://www.wpsymposiumpro.com !
 
 == Changelog ==
+
+15.7    Choose where admin links appear (Setup page or Admin dashboard menu) 
+        Option to hide Welcome header on setup page
 
 15.5     Admin: New Shortcodes section to easily view and change all the settings for WP Symposium Pro shortcodes!
          Admin: Add styles to all shortcodes (can avoid with styles="0" on a shortcode)
