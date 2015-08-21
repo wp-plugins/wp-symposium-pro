@@ -5,9 +5,9 @@ Donate link: http://www.wpsymposiumpro.com
 Link: http://www.wpsymposiumpro.com
 Tags: wp symposium pro, social network, social networking, social media, wpsymposium pro, wp-symposium, wp symposium, symposium
 Requires at least: 3.0
-Tested up to: 4.2.1
+Tested up to: 4.3
 License: GPLv2 or later
-Stable tag: 15.7
+Stable tag: 15.8
 
 Create your own social network in WordPress! Activity wall, friends, forums, private mail - and more!
 
@@ -71,8 +71,14 @@ The best way to see it in action, and try it out for free, is visit http://www.w
 
 == Changelog ==
 
-15.7    Choose where admin links appear (Setup page or Admin dashboard menu) 
-        Option to hide Welcome header on setup page
+15.8   Avatars now link to profile pages on activity, directory and forums
+         Edit Profile: Added required_msg to [wps-usermeta-change] (message for mandatory fields)
+         New WPS Pro->Setup->Profile Page option to set if an alert is sent when an activity post is sent to all friends 
+         New WPS Pro->Setup->Profile Page option to set if focus is set to new activity post textarea on page load
+         New Setup->System Options option ("HTTPS detection") which forces true to be returned when checking for presence of HTTPS server (known to overcome some situations when detection fails)
+
+15.7     Choose where admin links appear (Setup page or Admin dashboard menu) 
+         Option to hide Welcome header on setup page
 
 15.5     Admin: New Shortcodes section to easily view and change all the settings for WP Symposium Pro shortcodes!
          Admin: Add styles to all shortcodes (can avoid with styles="0" on a shortcode)
