@@ -3,7 +3,7 @@
 Plugin Name: WP Symposium Pro
 Plugin URI: http://www.simongoodchild.com
 Description: Quickly and easily add a social network to your WordPress website! For loads more extensions, please <a href="http://www.wpsymposiumpro.com">visit the WP Symposium Pro website</a>.
-Version: 
+Version: 15.10
 Author: Simon Goodchild
 Author URI: http://www.wpsymposiumpro.com
 License: GPLv2 or later
@@ -256,7 +256,7 @@ add_action( 'wp_footer', 'wps_add_wait_modal_box' );
 // Handle update
 function wps_update_routine() {
 
-	$new_version = '';
+	$new_version = '15.10';
 	if (is_blog_admin() && current_user_can('manage_options') && get_option('wp_symposium_pro_ver') != $new_version):
 		// Update groups last active flag
 		// Placed here as this routine is the only place that is definitely run after update
