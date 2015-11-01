@@ -7,7 +7,7 @@ Tags: wp symposium pro, social network, social networking, social media, wpsympo
 Requires at least: 3.0
 Tested up to: 4.3.1
 License: GPLv2 or later
-Stable tag: 15.10
+Stable tag: 15.11
 
 Create your own social network in WordPress! Activity wall, friends, forums, private mail - and more!
 
@@ -71,7 +71,12 @@ The best way to see it in action, and try it out for free, is visit http://www.w
 
 == Changelog ==
 
-15.10   Forums: Added hide_initial to [wps-forum] to set if to show post title on page 2+ if using pagination
+15.11    Edit Profile: If there is a problem when saving, the Tab with the problem in it also highlights as error, so if not on current tab, is clearer.
+         Activity: Added active_friends as option to [wps-activity] to assist in performance increase
+         Forum: Improved CSS of mobile forum post view, including removal of initial post author avatar
+         Core: Added constraint as second parameter to wps_get_friends()
+
+15.10    Forums: Added hide_initial to [wps-forum] to set if to show post title on page 2+ if using pagination
          Forums: Fixed bug to show comments when a topic is closed (were previously not showing)
          Various minor bug fixes.
 
