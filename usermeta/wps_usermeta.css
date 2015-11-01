@@ -1,0 +1,87 @@
+.wps_usermeta_change_item {
+	clear: both;
+	margin-top:20px;
+}
+.wps_usermeta_change_item input[type=text] {
+	max-width: 300px;
+}
+
+#wps_usermeta_change_submit {
+	margin-top: 10px;
+}
+
+.wps_usermeta_change_label {
+	font-weight: bold;
+}
+
+#wps_required_msg {
+    clear: both;
+    margin-top:25px;
+}
+
+/*----- Tabs -----*/
+.wps-tabs {
+    width:100%;
+    display:inline-block;
+}
+ 
+    /*----- Tab Links -----*/
+    .wps-tab-links {
+        margin-bottom: 0 !important;
+    }
+    /* Clearfix */
+    .wps-tab-links:after {
+        display:block;
+        clear:both;
+        content:'';
+    }
+ 
+    .wps-tab-links li {
+        margin:0px 5px;
+        float:left;
+        list-style:none;
+    }
+ 
+        .wps-tab-links a {
+            padding:9px 15px;
+            display:inline-block;
+            border-radius:3px 3px 0px 0px;
+            font-size:16px;
+            font-weight:600;
+            color:#4c4c4c;
+            transition:all linear 0.15s;
+            text-decoration: none;
+        }
+        .wps-tab-links a:visited {
+        }
+        .wps-tab-links a:hover {
+            text-decoration:none;
+        }
+ 
+    /*----- Content of Tabs -----*/
+    .wps-tab-content {
+        padding:15px !important;
+        border-radius:3px;
+        margin-top: -1px;
+    }
+    .wps-tab-content-inner {
+        width:98%;
+        overflow: auto;
+    }
+ 
+        .wps-tab {
+            display:none;
+        }
+ 
+        .wps-tab.active {
+            display:block;
+        }
+
+/* Tabs (responsive) */
+@media all and (max-width: 800px) {
+
+    .wps-tab-links { display:none; }
+    .wps-tab-content { border: 0 !important; padding: 0 !important;}
+    .wps-tab { display: block !important; }
+    
+}
